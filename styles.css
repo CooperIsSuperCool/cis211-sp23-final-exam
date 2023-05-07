@@ -6,15 +6,18 @@
     max-width: 1290px;
     align-items: center;
     margin:auto
+
 }
 
 
 body{
     font-family: 'Open Sans', sans-serif;
+    color: #303030;
 }
 
 h1, h2, h3{
     font-family: 'Open Sans', sans-serif;
+    color: #1f1f1f;
 }
 
 header{
@@ -26,17 +29,26 @@ header{
 header a {
     text-decoration: none;
     color: black;
-    display: inline-block;
     padding: 0 1%;
 
     font-size: 18px;
-    text-align: right;
+
+    display: block;
     float: right;
 
     padding-left: 2.5%;
-
+    
     margin-top: 1%;
+
+    margin-left: auto; 
+    margin-right: 0;
 }
+
+header a:hover{
+    color: #7a7a7a;
+}
+
+
 
 .one{
     justify-content: left;
@@ -54,6 +66,10 @@ p{
     font-size: 20px;
 }
 
+.one{
+    display: flex;
+    justify-content: space-between;
+}
 
 .one p {
     padding-top: 4%;
@@ -64,7 +80,7 @@ p{
     height: 50%; 
     width: 50%; 
     padding: 0;
-    padding-bottom: 100px; 
+    padding-bottom: 10%; 
 
     padding-right: 5%;
 }
@@ -90,6 +106,14 @@ p{
     box-shadow: 7px 7px 5px rgb(200, 200, 200);
 }
 
+button:hover{
+    background-color: #4476ff;
+}
+
+.email button:hover{
+    background-color: #4476ff;
+}
+
 .one input{
     border-radius: 5px;
     padding: 15px 80px 15px 80px;
@@ -99,7 +123,6 @@ p{
 
 .sectionborder{
     width: 100%;
-    height: 100%;
     
     font-size:0;
 }
@@ -113,6 +136,7 @@ p{
 
     justify-content: left;
     display: flex;
+    justify-content: space-between;
 }
 
 .two h1{
@@ -126,6 +150,13 @@ p{
 .two .link a{
     font-size: 20px;
     color: #50a799;
+    
+    align-items: top;
+}
+
+.two .link a:hover{
+    font-size: 20px;
+    color: #65d0be;
     
     align-items: top;
 }
@@ -181,7 +212,7 @@ p{
 
 .three{
     background-color: #575989;
-    padding: 7% 5% 7% 5% ;
+    padding: 7% 5% 7% 0%;
     color: white;
 
     display: flex;
@@ -189,24 +220,21 @@ p{
 
 .three .text{
     align-items: left;
+    width: 40%;
+}
+
+.three h1{
+    color: white;
 }
 
 .three p{
     padding-top: 3%;
-}
-
-.three .email{
-    margin-right: 18%;
-    margin-left: 20%;
+    font-size: 16px;
 }
 
 .three input{
-    margin-top: 20%;
-    margin-right: 20%;
-    margin-bottom: 5%;
-
     border-radius: 5px;
-    padding: 8% 50% 8% 50%;
+    padding: 5% 40% 5% 40%;
 
     box-shadow: 3px 3px 5px #4b4c77;
 
@@ -214,14 +242,12 @@ p{
 }
 
 .three button{
-    padding-top: 5%;
-    
     border: none;
     background-color: #2f65f9;
     color: white;
 
     border-radius: 12px;
-    padding: 8% 20% 8% 20%;
+    padding: 5% 20% 5% 20%;
     margin-top: 500px;
     text-align: center;
     text-decoration: none;
@@ -238,5 +264,130 @@ footer{
     background-color: #07043b;
     color: white;
 
-    padding: 5% 5% 4% 5%;
+    padding: 5% 0% 4% 0%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color: #5650c6;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+@media screen and (max-width: 700px){
+    *{
+        max-width: 100%;
+    }
+
+    .one{
+        flex-direction: column-reverse;
+        gap: 1rem;
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        margin: auto;
+        padding-bottom: 6%;
+    }
+
+    .one h1{
+        font-size: 32px;
+    }
+    .one p{
+        font-size: 22px;
+        padding: 0 12% 0 12%;
+    }
+
+    .one img{
+        width: 100%;
+    }
+
+    input{
+        width: 80%;
+    }
+    button{
+        width: 80%;
+    }
+
+    .two{
+        flex-direction: column-reverse;
+        gap: 1rem;
+        
+        margin: auto;
+    }
+
+    .two img{
+        padding-bottom: 10px;
+
+        height: 100%;
+        width: 100%;
+    }
+
+    .two h1{
+        font-size: 24px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .two p{
+        font-size: 18px
+    }
+
+    .two .quote{
+        width:82%;
+    }
+    .two .user{
+        margin-bottom: 15px;
+    }
+
+    .three{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .three .text{
+        width: 100%;
+        padding: 0 5% 0 5%;
+
+        text-align: center;
+    }
+
+    .three h1{
+        font-size: 28px;
+    }
+
+    .three p{
+        padding: 3% 10% 0 10%;
+    }
+
+    .three input{
+        width: 100%;
+    }
+
+    .three button{
+        width: 100%;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    footer a{
+        padding-top: .5rem;
+        
+        align-items: left;
+        float: left;
+    }
 }
